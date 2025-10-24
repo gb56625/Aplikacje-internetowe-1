@@ -1,0 +1,104 @@
+html { line-height: 1.5; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.container {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0 1.25rem;
+}
+.site-header .tagline { margin: .25rem 0 0; color: #475569; }
+
+.nav {
+  display: flex;
+  gap: .75rem;
+  padding: 0;
+  margin: .75rem 0 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav a {
+  text-decoration: none;
+  color: #0f172a;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+.nav a:hover,
+.nav a:focus { outline: none; background: #f1f5f9; }
+
+.content {
+  display: grid;
+  gap: 1.25rem;
+  padding-block: 1.25rem 2.5rem;
+}
+
+
+section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+article + article { margin-top: 1rem; }
+
+
+h1 { font-size: clamp(1.8rem, 2.5vw + 1rem, 2.6rem); margin: 0; }
+h2 { font-size: clamp(1.4rem, 1.4vw + .9rem, 1.9rem); margin: .25rem 0 1rem; }
+h3 { font-size: clamp(1.1rem, 1vw + .6rem, 1.3rem); margin: .75rem 0 .25rem; }
+p, li, dd { font-size: 1rem; }
+code { background: #f1f5f9; padding: .1rem .3rem; border-radius: .35rem; }
+
+
+ul, ol { padding-left: 1.25rem; }
+dl { display: grid; grid-template-columns: 1fr 2fr; gap: .5rem 1rem; }
+dt { font-weight: 700; }
+dd { margin: 0; color: #334155; }
+
+
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 1rem 0;
+  color: #475569;
+}
+
+
+
+@media (min-width: 900px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  #wstep {grid-column: 1 / span 7; grid-row: 1;}
+  #wczesne-lata {grid-column: 8 / span 5; grid-row: 1;}
+  #official {grid-column: 1 / -1; grid-row: 2;}
+  #photo1 {grid-column: 1 / -1; grid-row: 3;}
+  #microsoft-mojang {grid-column: 1 / -1; grid-row: 4;}
+  #photo2 {grid-column: 1 / -1; grid-row: 5;}
+}
+
+#photo1, #photo2 {background: transparent; border: none; padding: 0; margin: 1rem 0;}
+
+#photo1 .photo, #photo2 .photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+#photo1 .photo:hover, #photo2 .photo:hover {transform: scale(1.06);}
+
+
