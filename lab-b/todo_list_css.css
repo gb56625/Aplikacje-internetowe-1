@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* --- KONTENER GŁÓWNY --- */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: rgba(60, 60, 60, 0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 15px;
+  width: 95%;
+  max-width: 650px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.grid-item {
+  background-color: #2f2f2f;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* --- NAGŁÓWEK --- */
+.header {
+  background: linear-gradient(135deg, #333, #555);
+  color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 13px;
+  color: #bfbfbf;
+  margin: 5px 5px 5px;
+}
+
+/* --- POLA WYSZUKIWANIA --- */
+input.search {
+  border: none;
+  height: 44px;
+  border-radius: 20px 0 0 20px;
+  width: 60%;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  background: #e0e0e0;
+  color: #222;
+  transition: 0.3s;
+}
+
+input.search:focus {
+  background: #fff;
+}
+
+.searchBtn {
+  padding: 10px 15px;
+  width: auto;
+  min-width: 60px;
+  height: 45px;
+  border: none;
+  background: #666;
+  color: #f8f8f8;
+  font-size: 20px;
+  border-radius: 0 20px 20px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.searchBtn:hover {
+  background: #777;
+}
+
+/* --- LISTA ZADAŃ --- */
+.tasks {
+  overflow-y: auto;
+  max-height: 55vh;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  background: #f4f4f4;
+  margin: 8px 0;
+  padding: 14px 16px 14px 50px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color: #222;
+}
+
+li:hover {
+  background: #ebebeb;
+}
+
+li.checked {
+  background: #d1d1d1;
+  color: #555;
+  text-decoration: line-through;
+  opacity: 0.75;
+  border-left: 5px solid #888;
+}
+
+/* --- TEKST I EDYCJA --- */
+p {
+  margin: 0;
+  font-size: 17px;
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+
+input.editPara {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  width: 80%;
+  background: transparent;
+  color: #111;
+}
+
+/* --- DATA --- */
+time, input[type="date"].editDate {
+  position: absolute;
+  top: 50%;
+  right: 75px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+input[type="date"].editDate {
+  border: none;
+  background: transparent;
+  color: #444;
+  outline: none;
+}
+
+/* --- PRZYCISKI --- */
+.check, .close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+  color: #444;
+}
+
+.check {
+  left: 10px;
+}
+
+.check:hover {
+  color: #777;
+}
+
+.close {
+  right: 10px;
+}
+
+.close:hover {
+  color: #b44;
+}
+
+/* --- DODAWANIE ZADANIA --- */
+.footer {
+  background: linear-gradient(135deg, #333, #555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 16px;
+  gap: 6px;
+}
+
+input.add {
+  border: none;
+  border-radius: 20px 0 0 20px;
+  width: 55%;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  background: #e0e0e0;
+  color: #222;
+}
+
+input.add:focus {
+  background: #fff;
+}
+
+input[type="date"].addDate {
+  margin-left: 1%;
+  background-color: #666;
+  width: 25%;
+  min-width: 150px;
+  font-size: 16px;
+  color: #f8f8f8;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+input[type="date"].addDate:hover {
+  background: #555;
+}
+
+.addBtn {
+  border: none;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  background: #444;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.addBtn:hover {
+  background: #666;
+}
+
+/* --- PODŚWIETLENIE WYSZUKIWANIA --- */
+mark {
+  background: #d6d6d6;
+  border-radius: 4px;
+  padding: 0 3px;
+  color: #111;
+}
