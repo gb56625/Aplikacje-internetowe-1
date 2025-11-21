@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Map Puzzle</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="puzzleStyle.css">
+
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
+    >
+    <script
+      src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js">
+    </script>
+
+    <script src="https://rawgit.com/mapbox/leaflet-image/gh-pages/leaflet-image.js"></script>
+
+  </head>
+  <body>
+    <div class="top-container">
+      <div id="map"></div>
+
+      
+      <div id="puzzle"
+           ondrop="drop(event)"
+           ondragover="allowDrop(event)">
+      </div>
+    </div>
+
+    <div class="middle-container">
+      <div id="buttons">
+        <button class="mapBtn" onclick="getLocation()">Udostępnij lokalizację</button>
+        <button class="mapBtn" onclick="captureMap()">Pobierz mapę</button>
+      </div>
+    </div>
+
+    <div class="bot-container">
+      
+      <div id="elements"
+           ondrop="drop(event)"
+           ondragover="allowDrop(event)">
+      </div>
+    </div>
+
+    <p id="copyright">© Bartosz Grabarek 2025</p>
+
+    
+    <script src="puzzleScript.js"></script>
+  </body>
+</html>
