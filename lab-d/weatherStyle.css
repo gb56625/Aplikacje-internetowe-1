@@ -1,0 +1,153 @@
+:root {
+    --base: #6fa3c8;
+    --base-dark: #4d7a9b;
+    --base-darker: #355771;
+    --base-light: #a9cce4;
+    --base-lighter: #d7e8f3;
+    --text-light: #f2f7fa;
+}
+
+html {
+    background-color: var(--base-darker);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "tablet-gothic", Verdana, Arial, sans-serif;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+}
+
+
+#weather-search-params {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+#weather-search-params h1 {
+    color: var(--base-lighter);
+    margin: 10px 0 5px;
+}
+
+#weather-search-params small {
+    opacity: 0.8;
+    margin-bottom: 12px;
+    color: var(--base-light);
+}
+
+
+#locationInput {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--base-light);
+    background: var(--base-dark);
+    color: var(--text-light);
+    min-width: 220px;
+}
+
+#locationInput::placeholder {
+    color: var(--base-light);
+}
+
+#checkButton {
+    margin: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--base);
+    background: var(--base);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+#checkButton:hover {
+    background: var(--base-light);
+    transform: translateY(-1px);
+}
+
+#checkButton:active {
+    transform: translateY(0);
+}
+
+
+#weather-results-container {
+    padding: 10px 0 30px;
+}
+
+.weather-block {
+    background: var(--base-dark);
+    border: 2px solid var(--base-light);
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 20px 15px;
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.35);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.weather-block:hover {
+    background: var(--base);
+    transform: scale(1.01);
+}
+
+.weather-date {
+    font-weight: bold;
+    color: var(--base-lighter);
+}
+
+.weather-temperature {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.weather-temperature-feels-like {
+    opacity: 0.9;
+}
+
+.weather-description {
+    text-transform: capitalize;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+
+.weather-error,
+.weather-loading {
+    margin: 15px auto;
+    padding: 12px 16px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+.weather-error {
+    background: rgba(255, 130, 130, 0.1);
+    border-left: 4px solid #ff6b6b;
+    color: #ffaaaa;
+}
+
+
+.weather-loading {
+    background: rgba(255,255,255,0.07);
+    border-left: 4px solid var(--base);
+    font-style: italic;
+    color: var(--base-light);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

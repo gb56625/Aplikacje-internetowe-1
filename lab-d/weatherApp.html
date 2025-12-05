@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="weatherStyle.css">
+</head>
+
+<body>
+    <header id="weather-search-params">
+        <h1>Weather App</h1>
+        <small>© Bartosz Grabarek</small>
+
+        <div class="input-group">
+            <label for="locationInput" class="visually-hidden">Miejscowość</label>
+            <input 
+                type="text" 
+                id="locationInput" 
+                placeholder="miejscowość..."
+            >
+            <button id="checkButton">Sprawdź</button>
+        </div>
+    </header>
+
+    <main id="weather-results-container"></main>
+
+    <script src="weatherScript.js"></script>
+</body>
+</html>
